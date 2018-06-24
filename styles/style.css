@@ -1,0 +1,93 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  margin: 20px;
+  display: block;
+}
+
+input[type="text"], input[type="password"] {
+  font-size: 40px;
+  height: 80px;
+  width: 400px;
+  border:none;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+
+.rad{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+}
+
+input[type="radio"] {
+  position: absolute;
+  margin: 0;
+  height: inherit;
+  width: inherit;
+  opacity: 0;
+  z-index: 99;
+}
+
+input[type="radio"] + label {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  height: inherit;
+  width: inherit;
+  background-color: #eeeeee;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #14dbe8;
+}
+
+.check {
+    width: 100px;
+    height: 50px;
+  }
+
+  .check > input[type="checkbox"] {
+    margin: 0;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    opacity: 0;
+    z-index: 99;
+  }
+
+  .check > input[type="checkbox"] + label {
+    position: absolute;
+    display: block;
+    width: inherit;
+    height: inherit;
+    background-color: rgb(85, 146, 222);
+    border-radius: 50px;
+    transition: all .2s ease-out;
+  }
+
+  .check > input[type="checkbox"] + label::after {
+    content: '';
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 2px;
+    background-color: #cfcfcf;
+    border-radius: 50%;
+    transition: transform .2s ease-out;
+  }
+
+  .check > input[type="checkbox"]:checked + label {
+    background-color: rgb(166, 18, 5);
+  }
+
+  .check > input[type="checkbox"]:checked + label::after {
+    transform: translateX(50px);
+  }
